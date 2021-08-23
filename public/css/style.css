@@ -87,10 +87,6 @@ body {
   max-width: 614px;
 }
 
-.sidebar {
-  width: 293px;
-}
-
 .stories {
   display: flex;
   align-items: center;
@@ -213,9 +209,11 @@ body {
 }
 
 .sidebar {
+  width: 293px;
   padding-top: 24px;
-  position: sticky;
-  top: 88px;
+  position: fixed;
+    top: 88px;
+    right: calc((100% - 935px) / 2);
 }
 
 .sidebar > .usuario {

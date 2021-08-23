@@ -1,12 +1,12 @@
 import ExcMobile from "./ExcMobile";
 import Navbar from "./Navbar";
-import Corpo from "./Corpo";
+import Main from "./Main";
 
 export default function App () {
     return (
         <div>
             <Navbar />
-            <Corpo />
+            <Main />
             <ExcMobile />
         </div>
     );

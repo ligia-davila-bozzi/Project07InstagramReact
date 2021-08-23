@@ -3,7 +3,7 @@ export default function Posts() {
     {
       imgUser: "../assets/img/meowed.svg",
       user: "meowed",
-      conteudo: "../assets/img/gato-telefone.svg",
+      content: "../assets/img/gato-telefone.svg",
       imgLike: "../assets/img/respondeai.svg",
       like: "respondeai",
       likes: "outras 101.523 pessoas"
@@ -11,7 +11,7 @@ export default function Posts() {
     {
       imgUser: "../assets/img/barked.svg",
       user: "barked",
-      conteudo: "../assets/img/dog.svg",
+      content: "../assets/img/dog.svg",
       imgLike: "../assets/img/adorable_animals.svg",
       like: "adorable_animals",
       likes: "outras 99.159 pessoas"
@@ -19,7 +19,7 @@ export default function Posts() {
   ];
   return (
     <div class="posts">
-      {posts.map( post => <Post imgUser = {post.imgUser} user = {post.user} conteudo = {post.conteudo} imgLike = {post.imgLike} like = {post.like} likes = {post.likes} />)}
+      {posts.map( post => <Post imgUser = {post.imgUser} user = {post.user} content = {post.content} imgLike = {post.imgLike} like = {post.like} likes = {post.likes} />)}
     </div>
   );
 }
@@ -28,8 +28,8 @@ const Post = (props) => {
   return (
     <div class = "post">
       <TopPost imgUser = {props.imgUser} user = {props.user} />
-      <ConteudoPost conteudo = {props.conteudo} />
-      <FundoPost
+      <ContentPost content = {props.content} />
+      <PostBackground
         imgLike = {props.imgLike}
         like = {props.like}
         likes = {props.likes}
@@ -52,15 +52,15 @@ const TopPost = (props) => {
   );
 };
 
-const ConteudoPost = (props) => {
+const ContentPost = (props) => {
   return (
     <div class = "conteudo">
-      <img src = {props.conteudo} alt = "" />
+      <img src = {props.content} alt = "" />
     </div>
   );
 };
 
-const FundoPost = (props) => {
+const PostBackground = (props) => {
   return (
     <div class = "fundo">
       <div class = "acoes">

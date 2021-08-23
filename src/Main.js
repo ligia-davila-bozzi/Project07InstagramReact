@@ -1,7 +1,7 @@
 import Stories from "./Stories";
 import Posts from "./Posts";
 
-export default function Corpo() {
+export default function Main() {
   return (
     <main class="corpo">
       <Timeline />

@@ -5,7 +5,7 @@ export default function Navbar() {
         <Logo />
         <LogoMobile />
         <InstaMobile />
-        <Pesquisa />
+        <Search />
         <Icon />
         <IconMobile />        
       </div>
@@ -39,7 +39,7 @@ const InstaMobile = () => {
   );
 }
 
-const Pesquisa = () => {
+const Search = () => {
   return (
     <div class="pesquisa">
       <input type="text" placeholder="Pesquisar"></input>
