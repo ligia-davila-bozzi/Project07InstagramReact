@@ -1,23 +1,25 @@
 export default function Posts() {
+  const posts = [
+    {
+      imgUser: "../assets/img/meowed.svg",
+      user: "meowed",
+      conteudo: "../assets/img/gato-telefone.svg",
+      imgLike: "../assets/img/respondeai.svg",
+      like: "respondeai",
+      likes: "outras 101.523 pessoas"
+    },
+    {
+      imgUser: "../assets/img/barked.svg",
+      user: "barked",
+      conteudo: "../assets/img/dog.svg",
+      imgLike: "../assets/img/adorable_animals.svg",
+      like: "adorable_animals",
+      likes: "outras 99.159 pessoas"
+    }
+  ];
   return (
     <div class="posts">
-      <Post
-        imgUser = "../assets/img/meowed.svg"
-        user = "meowed"
-        conteudo = "../assets/img/gato-telefone.svg"
-        imgLike = "../assets/img/respondeai.svg"
-        like = "respondeai"
-        likes = "outras 101.523 pessoas"
-      />
-
-      <Post
-        imgUser = "../assets/img/barked.svg"
-        user = "barked"
-        conteudo = "../assets/img/dog.svg"
-        imgLike = "../assets/img/adorable_animals.svg"
-        like = "adorable_animals"
-        likes = "outras 99.159 pessoas"
-      />
+      {posts.map( post => <Post imgUser = {post.imgUser} user = {post.user} conteudo = {post.conteudo} imgLike = {post.imgLike} like = {post.like} likes = {post.likes} />)}
     </div>
   );
 }
@@ -25,7 +27,7 @@ export default function Posts() {
 const Post = (props) => {
   return (
     <div class = "post">
-      <TopoPost imgUser = {props.imgUser} user = {props.user} />
+      <TopPost imgUser = {props.imgUser} user = {props.user} />
       <ConteudoPost conteudo = {props.conteudo} />
       <FundoPost
         imgLike = {props.imgLike}
@@ -36,7 +38,7 @@ const Post = (props) => {
   );
 };
 
-const TopoPost = (props) => {
+const TopPost = (props) => {
   return (
     <div class = "topo">
       <div class = "usuario">

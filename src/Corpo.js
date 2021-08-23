@@ -22,12 +22,12 @@ const Timeline = () => {
 const Sidebar = () => {
   return (
     <div class="sidebar">
-      <Usuario
+      <User
         img="../assets/img/catanacomics.svg"
         arroba="catanacomics"
         user="Catana"
       />
-      <Sugestoes />
+      <Suggestions />
 
       <div class="links">
         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
@@ -39,7 +39,7 @@ const Sidebar = () => {
   );
 }
 
-const Usuario = (props) => {
+const User = (props) => {
   return (
     <div class="usuario">
       <img src={props.img} alt="" />
@@ -51,7 +51,14 @@ const Usuario = (props) => {
   );
 }
 
-const Sugestoes = () => {
+const Suggestions = () => {
+  const suggestions = [
+    {img: "../assets/img/bad.vibes.memes.svg", name: "bad.vibes.memes.svg", reason: "Segue você"},
+    {img: "../assets/img/chibirdart.svg", name: "chibirdart", reason: "Segue você"},
+    {img: "../assets/img/razoesparaacreditar.svg", name: "razoesparaacreditar", reason: "Novo no Instagram"},
+    {img: "../assets/img/adorable_animals.svg", name: "adorable_animals", reason: "Segue você"},
+    {img: "../assets/img/smallcutecats.svg", name: "smallcutecats", reason: "Segue você"}
+  ];
   return (
     <div class="sugestoes">
       <div class="titulo">
@@ -59,16 +66,12 @@ const Sugestoes = () => {
         <div>Ver tudo</div>
       </div>
 
-      <Sugestao img = "../assets/img/bad.vibes.memes.svg" name = "bad.vibes.memes" reason = "Segue você" />
-      <Sugestao img = "../assets/img/chibirdart.svg" name = "chibirdart" reason = "Segue você" />
-      <Sugestao img = "../assets/img/razoesparaacreditar.svg" name = "razoesparaacreditar" reason = "Novo no Instagram" />
-      <Sugestao img = "../assets/img/adorable_animals.svg" name = "adorable_animals" reason = "Segue você" />
-      <Sugestao img = "../assets/img/smallcutecats.svg" name = "smallcutecats" reason = "Segue você" />
+      {suggestions.map(suggestion => <Suggestion img = {suggestion.img} name = {suggestion.name} reason = {suggestion.reason} />)}
     </div>
   );
 }
 
-const Sugestao = (props) => {
+const Suggestion = (props) => {
   return (
     <div class="sugestao">
         <div class="usuario">
